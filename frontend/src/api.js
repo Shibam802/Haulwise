@@ -1,4 +1,6 @@
-const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000";
+// Strip any trailing slash(es) so VITE_API_BASE_URL works whether it's set
+// with or without one (avoids accidental "//api/..." double-slash URLs).
+const API_BASE = (import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000").replace(/\/+$/, "");
 
 export async function planTrip({ currentLocation, pickupLocation, dropoffLocation, currentCycleUsed }) {
   const res = await fetch(`${API_BASE}/api/plan-trip/`, {
