@@ -6,22 +6,22 @@ Haulwise takes the driver's current location, pickup location, drop-off location
 
 ## ✨ Features
 
-- 📍 Geocodes current, pickup, and drop-off locations
-- 🗺️ Calculates driving routes using OSRM
-- ⏱️ Simulates FMCSA Hours-of-Service (HOS) rules
-- 🚚 Enforces the 11-hour driving limit
-- ⏰ Enforces the 14-hour duty window
-- 🛑 Automatically schedules the required 30-minute break
-- 💤 Handles 10-hour daily rest periods
-- 🔄 Handles the 70-hour / 8-day cycle
-- 🔁 Supports the 34-hour restart
-- ⛽ Automatically schedules fuel stops every 1,000 miles
-- 📦 Includes 1-hour pickup and drop-off activities
-- 🗺️ Displays routes and stops on an interactive map
-- 🧾 Generates FMCSA-style daily ELD log sheets
-- ⚛️ React + Vite frontend
-- 🐍 Django REST API backend
-- 🚀 Ready for deployment with Render and Vercel
+* 📍 Geocodes current, pickup, and drop-off locations
+* 🗺️ Calculates driving routes using OSRM
+* ⏱️ Simulates FMCSA Hours-of-Service (HOS) rules
+* 🚚 Enforces the 11-hour driving limit
+* ⏰ Enforces the 14-hour duty window
+* 🛑 Automatically schedules the required 30-minute break
+* 💤 Handles 10-hour daily rest periods
+* 🔄 Handles the 70-hour / 8-day cycle
+* 🔁 Supports the 34-hour restart
+* ⛽ Automatically schedules fuel stops every 1,000 miles
+* 📦 Includes 1-hour pickup and drop-off activities
+* 🗺️ Displays routes and stops on an interactive map
+* 🧾 Generates FMCSA-style daily ELD log sheets
+* ⚛️ React + Vite frontend
+* 🐍 Django REST API backend
+* 🚀 Ready for deployment with Render and Vercel
 
 ---
 
@@ -29,23 +29,23 @@ Haulwise takes the driver's current location, pickup location, drop-off location
 
 ### Frontend
 
-- React
-- Vite
-- Leaflet
-- JavaScript
-- HTML / CSS
+* React
+* Vite
+* Leaflet
+* JavaScript
+* HTML / CSS
 
 ### Backend
 
-- Python
-- Django
-- Django REST Framework
-- Gunicorn
+* Python
+* Django
+* Django REST Framework
+* Gunicorn
 
 ### External Services
 
-- **OpenStreetMap Nominatim** — Geocoding
-- **OSRM** — Driving routes, distance, and duration
+* **OpenStreetMap Nominatim** — Geocoding
+* **OSRM** — Driving routes, distance, and duration
 
 ### Database
 
@@ -102,10 +102,10 @@ eld-app/
 
 Make sure you have the following installed:
 
-- Python 3.10+
-- Node.js 18+
-- npm
-- Git
+* Python 3.10+
+* Node.js 18+
+* npm
+* Git
 
 ---
 
@@ -372,14 +372,14 @@ representing the driver's duty status throughout the day.
 
 The log can display:
 
-- 🟢 Off Duty
-- 🔵 Sleeper Berth / Rest
-- 🟠 Driving
-- 🟣 On Duty
-- ⛽ Fuel Stops
-- 📦 Pickup
-- 📦 Drop-off
-- 🛑 Required Breaks
+* 🟢 Off Duty
+* 🔵 Sleeper Berth / Rest
+* 🟠 Driving
+* 🟣 On Duty
+* ⛽ Fuel Stops
+* 📦 Pickup
+* 📦 Drop-off
+* 🛑 Required Breaks
 
 For longer trips, users can switch between different daily log sheets.
 
@@ -391,9 +391,9 @@ The implementation follows the assumptions provided in the assessment brief.
 
 ### Driver
 
-- Property-carrying driver
-- 70-hour / 8-day cycle
-- No adverse driving conditions
+* Property-carrying driver
+* 70-hour / 8-day cycle
+* No adverse driving conditions
 
 ### Trip Start
 
@@ -429,12 +429,12 @@ This approach allows rest periods crossing calendar midnight to be represented c
 
 # 🌐 Third-Party Services
 
-| Service | Purpose |
-|---|---|
-| OpenStreetMap | Map data |
-| Nominatim | Geocoding |
-| OSRM | Driving route and distance |
-| Leaflet | Interactive map |
+| Service       | Purpose                    |
+| ------------- | -------------------------- |
+| OpenStreetMap | Map data                   |
+| Nominatim     | Geocoding                  |
+| OSRM          | Driving route and distance |
+| Leaflet       | Interactive map            |
 
 These services are used without API keys for the assessment implementation.
 
@@ -530,10 +530,10 @@ For the project demonstration, the following flow is recommended:
 
 Show the trip form and enter:
 
-- Current location
-- Pickup location
-- Drop-off location
-- Hours already used in the current cycle
+* Current location
+* Pickup location
+* Drop-off location
+* Hours already used in the current cycle
 
 Submit the trip.
 
@@ -541,14 +541,14 @@ Submit the trip.
 
 Demonstrate:
 
-- Calculated route
-- Total distance
-- Estimated driving time
-- Pickup
-- Drop-off
-- Rest periods
-- Fuel stops
-- Breaks
+* Calculated route
+* Total distance
+* Estimated driving time
+* Pickup
+* Drop-off
+* Rest periods
+* Fuel stops
+* Breaks
 
 ### 3. Daily Log Sheets
 
@@ -556,13 +556,13 @@ For a multi-day trip, switch between the daily log tabs.
 
 Point out:
 
-- Driving periods
-- On-duty periods
-- Off-duty periods
-- 30-minute break
-- 10-hour rest
-- Fuel stop
-- 34-hour restart when applicable
+* Driving periods
+* On-duty periods
+* Off-duty periods
+* 30-minute break
+* 10-hour rest
+* Fuel stop
+* 34-hour restart when applicable
 
 ### 4. HOS Engine
 
@@ -580,13 +580,13 @@ add_drive()
 
 This is where the main HOS constraint logic is implemented, including:
 
-- Driving limits
-- Duty-window limits
-- Break requirements
-- Fuel intervals
-- Cycle-hour limits
-- 10-hour resets
-- 34-hour restart logic
+* Driving limits
+* Duty-window limits
+* Break requirements
+* Fuel intervals
+* Cycle-hour limits
+* 10-hour resets
+* 34-hour restart logic
 
 ### 5. Explain the Assumptions
 
@@ -720,12 +720,12 @@ pip install -r backend/requirements.txt
 
 The objective of Haulwise is to demonstrate how a full-stack application can combine:
 
-- Geographic routing
-- Constraint-based scheduling
-- FMCSA HOS rules
-- Interactive mapping
-- ELD-style visualization
-- REST API architecture
+* Geographic routing
+* Constraint-based scheduling
+* FMCSA HOS rules
+* Interactive mapping
+* ELD-style visualization
+* REST API architecture
 
 to produce a practical trip-planning solution for commercial truck drivers.
 
@@ -735,11 +735,12 @@ to produce a practical trip-planning solution for commercial truck drivers.
 
 **Haulwise — Trip & ELD Log Planner**
 
-**Backend:** Django + Django REST Framework  
-**Frontend:** React + Vite  
-**Mapping:** Leaflet + OpenStreetMap  
-**Routing:** OSRM  
+**Backend:** Django + Django REST Framework
+**Frontend:** React + Vite
+**Mapping:** Leaflet + OpenStreetMap
+**Routing:** OSRM
 **Geocoding:** Nominatim
+
 
  
  
